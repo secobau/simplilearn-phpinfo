@@ -1,3 +1,0 @@
-FROM library/alpine:latest
-RUN apk add curl && apk add php
-COPY src/ /src/
