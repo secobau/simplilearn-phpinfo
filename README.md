@@ -7,6 +7,8 @@ GITHUB_BRANCH=2021-08
 GITHUB_RELEASE=single-line
 NODEPORT=80
 
+cd ${HOME}
+
 git clone https://github.com/${GITHUB_USERNAME}/${GITHUB_PROJECT}
 cd ${GITHUB_PROJECT}
 git pull
