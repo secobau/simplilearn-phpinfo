@@ -41,7 +41,7 @@ sudo docker container top ${GITHUB_PROJECT}_${GITHUB_RELEASE}
 sudo docker container stats --no-stream ${GITHUB_PROJECT}_${GITHUB_RELEASE}
 
 GITHUB_RELEASE=no-volume-metadata
-NODEPORT=82
+NODEPORT=83
 
 sudo docker image build --file Dockerfile-${GITHUB_RELEASE} --tag ${GITHUB_USERNAME}/${GITHUB_PROJECT}:${GITHUB_RELEASE} ./
 sudo docker container run --cpus 0.050 --detach --memory 10M --name ${GITHUB_PROJECT}_${GITHUB_RELEASE} --publish ${NODEPORT}:8080 --read-only --rm ${GITHUB_USERNAME}/${GITHUB_PROJECT}:${GITHUB_RELEASE}
