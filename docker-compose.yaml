@@ -40,7 +40,7 @@ services:
           - node.role == worker
     entrypoint:
       - sh
-      - -c
+      - '-c'
     environment:
       HELLO: bye
     image: alpine/git:latest
